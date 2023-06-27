@@ -1,8 +1,13 @@
-import java.util.HashMap;
-import java.util.TreeMap;
+import HeapSort.Sort;
+// import java.util.HashMap;
+// import java.util.TreeMap;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        int[] sortArr = {12, 6, 4, 1, 15, 10, 0, 35,-12};   //целочисленный массив
+        Sort.heapSort(sortArr);                             //пирамидальная сортировка
+        for(int i = 0; i < sortArr.length; i++)
+            System.out.print(sortArr[i] + "\n");
         // System.out.println("Hello, World!");
         // HashMap<Integer, String> map = HashMapTest.Test.fill();
         // HashMapTest.Test.printHashMap(map, "Иванов");
@@ -32,15 +37,15 @@ public class App {
         // System.out.println(BracketTest.Tester.validation(open, close, "{a}[+]{(d*3)}"));
         // System.out.println(BracketTest.Tester.validation(open, close, "<{a}+{(d*3)}>"));
         // System.out.println(BracketTest.Tester.validation(open, close, "{a+]}{(d*3)}"));
-        String line = "Мороз и солнце день чудесный ещё ты дремлешь друг прелестный";
-        String[] sLine = line.split(" ");
-        HashMap<String, Integer> map = new HashMap<>();
-        for(String s: sLine){
-            map.put(s, s.length());
-        }
-        TreeMap sortMap = TreeMapTest.Test.sortHashMap(map);
-        // sortMap.entrySet().forEach(s->System.out::println(s));
-        sortMap.entrySet().forEach(System.out::println);
+        // String line = "Мороз и солнце день чудесный ещё ты дремлешь друг прелестный";
+        // String[] sLine = line.split(" ");
+        // HashMap<String, Integer> map = new HashMap<>();
+        // for(String s: sLine){
+        //     map.put(s, s.length());
+        // }
+        // TreeMap sortMap = TreeMapTest.Test.sortHashMap(map);
+        // // sortMap.entrySet().forEach(s->System.out::println(s));
+        // sortMap.entrySet().forEach(System.out::println);
         // System.out.println();
     }
 }

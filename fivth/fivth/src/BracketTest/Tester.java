@@ -3,11 +3,11 @@ package BracketTest;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.Map;
+// import java.util.Map;
 
 public class Tester {
     public static boolean validation(HashMap<String, Integer> open, HashMap<String, Integer> close, String line) {
-        boolean res = true;
+        // boolean res = true;
         Deque<String> stack = new ArrayDeque<>();
 
         for (int i = 0; i < line.length(); i++) {
