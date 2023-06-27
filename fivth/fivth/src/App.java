@@ -1,13 +1,26 @@
-import HeapSort.Sort;
 // import java.util.HashMap;
 // import java.util.TreeMap;
+import PhoneBook.PhoneBook;
+import HeapSort.Sort;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception {
+            // пирамидальная сортировка
         int[] sortArr = {12, 6, 4, 1, 15, 10, 0, 35,-12};   //целочисленный массив
         Sort.heapSort(sortArr);                             //пирамидальная сортировка
         for(int i = 0; i < sortArr.length; i++)
             System.out.print(sortArr[i] + "\n");
+        
+            // словарь телефонной книги
+            PhoneBook.addContact("Иванов", "111-12-12");
+            PhoneBook.addContact("Сократ", "555-34-34");
+            PhoneBook.addContact("Иванов", "222-34-34");
+            PhoneBook.addContact("Сурок", "333-34-34");
+            PhoneBook.addContact("Пушкин", "565-44-34");
+            PhoneBook.addContact("Иванов", "155-34-34");
+            PhoneBook.addContact("Сократ", "255-34-34");
+
+            PhoneBook.printContacts();
         // System.out.println("Hello, World!");
         // HashMap<Integer, String> map = HashMapTest.Test.fill();
         // HashMapTest.Test.printHashMap(map, "Иванов");
