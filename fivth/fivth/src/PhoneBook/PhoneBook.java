@@ -20,7 +20,7 @@ public class PhoneBook {
             contacts.put(name, phoneNumbers);
         }
     }
-// <String>
+
     public static void printContacts() {
         ArrayList<Map.Entry<String, ArrayList<String>>> list = new ArrayList<>(contacts.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<String, ArrayList<String>>>(){
