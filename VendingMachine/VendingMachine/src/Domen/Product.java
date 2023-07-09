@@ -2,8 +2,8 @@ package Domen;
 
 public class Product {
     // Поля
-    private int price;
-    private int place;
+    protected int price;
+    public int place;
     private String name;
     private long id;
 
