@@ -1,5 +1,6 @@
 package Domen;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -26,6 +27,11 @@ public class StudentSteam implements Iterable<StudentGroup>{
 
     public void setIdSteam(Integer idSteam) {
         this.idSteam = idSteam;
+    }
+
+   
+    public void sort() {        
+        Collections.sort(steam);
     }
 
     @Override

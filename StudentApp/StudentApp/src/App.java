@@ -68,7 +68,15 @@ public class App {
             // System.out.println(stg.getGroupSize());
             System.out.println("=========================================================");
         }
-        // Collections.sort(steam666);   
+        // StudentSteam.sort();
+        // steam666.sort();   
+        Collections.sort(steam666);
+        System.out.println("================Sorted Groups in Steam===================");
+        for(StudentGroup stg: steam666) {      
+            System.out.println(stg);
+            // System.out.println(stg.getGroupSize());
+            System.out.println("=========================================================");
+        }
         
     }   
 }
