@@ -20,10 +20,10 @@ public class HotDrink extends Product {
     //     super(4, 10, "Hot Drink", -1);
     //     this.hotDrintTemp = 40;
     // }
-    // public HotDrink(int price, int place, String name, long id){
-    //     super(price,place,name,id);
-    //     this.hotDrintTemp = 40;
-    // }
+    public HotDrink(int price, int place, String name, long id){
+        super(price,place,name,id);
+        this.hotDrintTemp = 40;
+    }
     public HotDrink (int price, int place, String name, long id, int temp){
         super(price,place,name,id);
         this.hotDrintTemp = temp;

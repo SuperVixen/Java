@@ -1,6 +1,6 @@
 package Interfaces;
 
-import Classes.Actor;
+// import Classes.Actor;
 
 public interface iReturnOrder {
     void takeInQueue(iActorBehaviuor actor);

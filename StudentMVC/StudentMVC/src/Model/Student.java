@@ -1,4 +1,4 @@
-package Domen;
+package Model;
 
 
 public class Student extends Person implements Comparable<Student> {
@@ -10,19 +10,39 @@ public class Student extends Person implements Comparable<Student> {
         this.id = id;
     }
 
+    // private int age;
+    // private String name;
+
     
+    
+
+    // public int getAge() {
+    //     return age;
+    // }
+
+    // public String getName() {
+    //     return name;
+    // }
+
     public int getId() {
         return id;
     }
 
-   
+    // public void setAge(int age) {
+    //     this.age = age;
+    // }
+
+    // public void setName(String name) {
+    //     this.name = name;
+    // }
+
     public void setId(int id) {
         this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Student " + super.getName() + ", age=" + super.getAge() + ", id=" + id + "\n";
+        return "Students [age=" + super.getAge() + ", name=" + super.getName() + ", id=" + id + "]";
     }
 
     @Override
@@ -42,5 +62,10 @@ public class Student extends Person implements Comparable<Student> {
         else
         return -1;        
     }
+
+
+    
+    
     
 }
+
