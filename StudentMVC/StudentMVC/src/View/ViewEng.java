@@ -5,15 +5,17 @@ import java.util.Scanner;
 
 import Controller.iGetView;
 import Model.Student;
-
-public class View implements iGetView {
+/*
+ * View на английском
+ */
+public class ViewEng implements iGetView {
     public void printAllStudents(List<Student> students){
-        System.out.println("-------------Список студентов--------------");
+        System.out.println("-------------Student list--------------");
         for(Student stud: students)
         {
             System.out.println(stud);
         }
-        System.out.println("============================================");
+        System.out.println("=======================================");
     }
    
     @Override
@@ -25,8 +27,9 @@ public class View implements iGetView {
 
     @Override
     public Integer getStudentIdToDelete(String msg) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getStudentIdToDelete'");
+        Scanner in = new Scanner(System.in);
+       System.out.print(msg);
+       return Integer.parseInt(in.nextLine());
     }
 
     @Override

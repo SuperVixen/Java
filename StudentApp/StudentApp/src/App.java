@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 import Controllers.EmploeeController;
+import Domen.AverageAge;
 import Domen.Emploee;
 import Domen.Person;
 import Domen.PersonComparator;
@@ -102,5 +103,7 @@ public class App {
        // EmploeeController.paySalary(s1);
         //empControll.paySalary(e1);
         //empControll.paySalary(s1);
+        // AverageAge.getAverageAge(listSteam13);
+
     }   
 }
