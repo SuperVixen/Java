@@ -25,8 +25,9 @@ public class HashModel implements iGetModel {
     
     @Override
     public List<Student> studentIdToDelete(int id) {
-        students.remove(id);
+        
         List<Student> valueList = new ArrayList<Student>(students.values());
+        valueList.remove(id);
         return valueList;
     }
 }
