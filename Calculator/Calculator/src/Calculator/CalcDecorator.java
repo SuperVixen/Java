@@ -12,9 +12,9 @@ public class CalcDecorator implements iCalcComplex {
 
     @Override
     public iCalcComplex sum(double arg, double imArg) {
-       double firstArg = oldCalc.getResult();
+       String firstArg = oldCalc.getResult();
 
-       logger.log(String.format("Первое значение калькулятора %f. Начало вызова метода sum с параметром %f", firstArg, arg));
+       logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода sum с параметром %f + %f * i", firstArg, arg, imArg));
        iCalcComplex result = oldCalc.sum(arg, imArg);
        logger.log(String.format("Вызова метода sum произошел"));
 
@@ -23,17 +23,26 @@ public class CalcDecorator implements iCalcComplex {
 
     @Override
     public iCalcComplex multi(double arg, double imArg) {
-       double firstArg = oldCalc.getResult();
-        logger.log(String.format("Первое значение калькулятора %f. Начало вызова метода multi с параметром %f", firstArg, arg));
+       String firstArg = oldCalc.getResult();
+        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода multi с параметром %f + %f * i", firstArg, arg, imArg));
         iCalcComplex result = oldCalc.multi(arg, imArg);
         logger.log(String.format("Вызова метода multi произошел"));
         return result;
     }
 
     @Override
-    public double getResult() {
-        double result = oldCalc.getResult();
+    public String getResult() {
+        String result = oldCalc.getResult();
         logger.log(String.format("Получение результата " + result));
+        return result;
+    }
+
+    @Override
+    public iCalcComplex div(double arg, double imArg) {
+        String firstArg = oldCalc.getResult();
+        logger.log(String.format("Первое значение калькулятора %s. Начало вызова метода div с параметром %f + %f * i", firstArg, arg, imArg));
+        iCalcComplex result = oldCalc.div(arg, imArg);
+        logger.log(String.format("Вызова метода div произошел"));
         return result;
     }
     

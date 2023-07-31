@@ -13,23 +13,7 @@ public final class CalcComplex implements iCalcComplex{
         this.imagiArg = imagiArg;
     }
 
-    // @Override
-    // public iCalcComplex sum(Double arg, Double imArg) {
-    //     primaryArg += arg;
-    //     imagiArg += imArg;
-    //     return this;
-    // }
-
-    // @Override
-    // public iCalcComplex multi(Double arg, Double imArg) {
-    //     primaryArg *= arg;
-    //     imagiArg *= imArg;
-    //     return this;
-    // }
-
-    // public CalcComplex(int i, int j) {
-    // }
-
+    
     @Override
     public iCalcComplex sum(double realPart, double imaginaryPart) {
         primaryArg += realPart;
@@ -39,13 +23,24 @@ public final class CalcComplex implements iCalcComplex{
 
     @Override
     public iCalcComplex multi(double realPart, double imaginaryPart) {
-        primaryArg *= realPart;
-        imagiArg *= imaginaryPart;
+        primaryArg = primaryArg * realPart - imagiArg * imaginaryPart;
+        imagiArg = primaryArg * imaginaryPart + imagiArg * realPart;
         return this;
     }
 
     @Override
-    public double getResult() {
-        return primaryArg + imagiArg;
+    public String getResult() {
+        // return primaryArg + imagiArg;
+        // String total2 = String.valueOf(total);
+        return String.valueOf(primaryArg) + " + " + String.valueOf(imagiArg) + "* i";
+    }
+
+
+    @Override
+    public iCalcComplex div(double realPart, double imaginaryPart) {
+        double denominator = realPart * realPart + imaginaryPart * imaginaryPart;
+        primaryArg = (primaryArg * realPart + imagiArg * imaginaryPart) / denominator;
+        imagiArg = (imagiArg * realPart - primaryArg * imaginaryPart) / denominator;
+        return this;
     }
 }

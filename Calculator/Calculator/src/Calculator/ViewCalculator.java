@@ -22,7 +22,7 @@ public class ViewCalculator {
             // calculator.sum(imagiArg);
           
             while (true) {
-                String cmd = prompt("Введите команду (*, +, =) : ");
+                String cmd = prompt("Введите команду (*, /, +, =) : ");
                 if (cmd.equals("*")) {
                     double arg = promptDouble("Введите вещественную часть второго числа: ");
                     double imArg = promptDouble("Введите мнимую часть второго числа: ");
@@ -35,9 +35,15 @@ public class ViewCalculator {
                     calculator.sum(arg, imArg);
                     continue;
                 }
+                if (cmd.equals("/")) {
+                    double arg = promptDouble("Введите вещественную часть второго числа: ");
+                    double imArg = promptDouble("Введите мнимую часть второго числа: ");
+                    calculator.div(arg, imArg);
+                    continue;
+                }
                 if (cmd.equals("=")) {
-                    double result = calculator.getResult();
-                    System.out.printf("Результат %d\n", result);
+                    String result = calculator.getResult();
+                    System.out.printf("Результат %s\n", result);
                     break;
                 }
             }
